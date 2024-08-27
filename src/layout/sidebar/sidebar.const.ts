@@ -4,18 +4,21 @@ import { Frame, ImagePlus }from 'lucide-react'
 export type TSidebar = {
     name: string;
     icon: any;
-    path: string
+    path: string;
+    isActive: boolean;
 }
 const SIDEBAR_MENU: TSidebar[] = [
     {
         name: 'home',
         icon: Frame,
-        path: APP_ROUTES.HOME.path
+        path: APP_ROUTES.HOME.path,
+        isActive: true
     },
     {
         name: 'upload',
         icon: ImagePlus,
-        path: APP_ROUTES.UPLOAD.path
+        path: APP_ROUTES.UPLOAD.path,
+        isActive: false
     }
 ]
 
