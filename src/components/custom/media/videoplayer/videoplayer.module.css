@@ -1,6 +1,6 @@
 input[type="range"] {
     -webkit-appearance: none; /* Remove default styles in WebKit browsers */
-    width: 90%;
+    width: 100%;
     height: 1px; /* Slider height */
     background: #ddd; /* Track background color */
     outline: none; /* Remove the outline */

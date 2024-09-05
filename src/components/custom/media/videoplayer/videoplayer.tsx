@@ -75,6 +75,8 @@ function Videoplayer({
     };
 
     useEffect(() => {
+        if(!videoRef)return
+console.log("effect >>>>", videoRef?.current?.duration)
         const { min, sec } = sec2Min(videoRef.current.duration);
         setDurationSec(videoRef.current.duration);
         setDuration([min, sec]);
@@ -86,7 +88,7 @@ function Videoplayer({
             setCurrentTime([min, sec]);
         }, 1000);
         return () => clearInterval(interval);
-    }, [isPlaying]);
+    }, [isPlaying, videoRef?.current?.duration]);
 
     const handlePlay = () => {
         if (isPlaying) {
@@ -97,7 +99,7 @@ function Videoplayer({
             setIsPlaying(true);
         }
     };
-
+    console.log("video ref >>>>", videoRef)
     return (
         <div style={vps.container} className='bg-yello-400'>
             <div style={vps.playerContainer}>
