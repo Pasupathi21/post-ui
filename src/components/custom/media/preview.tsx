@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 import { videoMimeTypes, audioMimeTypes, imageMimeTypes } from '@/data/app.const'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../../ui/dialog'
 import { COLOR } from '@/data/color.const'

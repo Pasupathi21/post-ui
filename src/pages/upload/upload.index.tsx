@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 import Model from '@/components/custom/model'
 import img from '../../assets/images/upload-image.png'
 import { Plus } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import {  useState } from 'react'
 // ******** shade cn
 import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
@@ -18,11 +18,11 @@ import { useFormik } from 'formik'
 
 export default function Upload() {
   const [openModel, setOpenModel] = useState<boolean>(false)
-  const [formState, setFormState] = useState<any>({
+  const [formState, _setFormState] = useState<any>({
     title: null,
     description: null
   })
-  const [preFile, setPreFile] = useState<any>(null)
+  const [_preFile, setPreFile] = useState<any>(null)
   const handleFile = (files: any[]) => {
     console.log("files >>>>>>", files)
     const objURL = URL.createObjectURL(files[0])
