@@ -51,7 +51,7 @@ export default function FileUploadPreview({
     <Dialog open={open} onOpenChange={() => handleClose()}>
       <DialogTrigger asChild></DialogTrigger>
       <DialogContent
-        className={`sm:max-w-[425px] h-[50%] bg-[${COLOR.primary_background}]`}
+        className={`sm:max-w-[425px] h-[50%] bg-[${COLOR.primary_background}] flex flex-wrap flex-col`}
       >
         <DialogHeader>
           <DialogTitle className="text-white">{title && title}</DialogTitle>
@@ -59,7 +59,7 @@ export default function FileUploadPreview({
             {description && description}
           </DialogDescription>
         </DialogHeader>
-        <div className="w-full h-[50%] flex flex-1 flex-wrap justify-center items-center ">
+        <div className="w-full h-[50%] flex flex-1 flex-wrap justify-center items-center bg-red-600">
           {
           previewFiles.map((file: Record<string, any>) =>
             imageMimeTypes.includes(file.type) ? (

@@ -16,8 +16,9 @@ function Videoplayer({
       display: "flex",
       margin: "0 auto",
       justifyContent: "center",
-      width: "80%",
-      /* overflow: hidden; */
+      width: "100%",
+      backgroundColor: "yellow",
+      overflow: "hidden"
     },
     playerContainer: {
       display: "flex",
